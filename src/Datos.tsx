@@ -3,9 +3,9 @@ import Cards from './components/Card';
 import { useFetchRepositori } from './hooks/useRepo';
 import { useFavoriteReposStora } from './store/favoriteRepos';
 
-export default function Datos() {
+export default function Datos({datos}) {
 
-const { data, isLoading } = useFetchRepositori("ramiroQuiro");
+const { data, isLoading } = useFetchRepositori(datos);
 const { favoriteReposID } = useFavoriteReposStora();
 
 if (isLoading) return (
