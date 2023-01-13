@@ -20,7 +20,7 @@ const handleFavorite=()=>{
 }
 
   return (
-    <div className="border rounded-lg text-center p-5">
+    <div className="border rounded-lg bg-gray-100 text-center p-5">
       <div className="p-4 w-full">
       <h1>{repository.name}</h1>
         <div className="mt-4">

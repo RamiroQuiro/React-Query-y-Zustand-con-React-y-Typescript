@@ -3,7 +3,7 @@ import api from "../api/gitHub";
 import { Repository } from "./types";
 
 async function fetchRepos(ctx:QueryFunctionContext) {
-const[_,gitUser]=ctx.queryKey
+const[_,gitUser]= ctx.queryKey
     const {data} = await api.get<Repository[]>(`/users/${gitUser}/repos`)
     return data
 }
