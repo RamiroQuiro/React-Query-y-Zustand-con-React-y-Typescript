@@ -5,14 +5,17 @@ import TableBody from "./TableBody";
 
 export default function Table({datos}) {
 
-const {data,isLoading}=useFetchRepositori(datos)
+const {data,isLoading,isError}=useFetchRepositori(datos)
 const {favoriteReposID}=useFavoriteReposStora()
 
 
 if (isLoading) return (
   <div>Loading....</div>
 )
+if(isError) return(
 
+  <div>{isError}</div>
+)
   return (
     <table className="table-auto w-full text-left whitespace-no-wrap">
       <thead>
@@ -38,7 +41,6 @@ if (isLoading) return (
         </tr>
       </thead>
       <tbody>
-
         {data?.map(repo=>(
           <TableBody
           repository={repo}
