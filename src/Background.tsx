@@ -10,10 +10,10 @@ export default function Background() {
 const colocarImg=()=>{}
 
   return (
-    <div className="absolute w-full  h-screen bg-red-100/10 backdrop-blur-sm z-0 top-0 left-0">
+    <div className="absolute w-full  h-full bg-red-100/10 backdrop-blur-sm z-0 top-0 left-0">
         <div className="w-80 bg-red-500/20 h-80 absolute rounded-full top-1/2 right-2 blur-[150px]"></div>
         <div className="w-96 bg-orange-500/20 h-96 absolute rounded-full -top-20 -left-20 blur-[150px]"></div>
-      <div className="relative h-screen w-full  ">
+      <div className="relative h-full w-full  ">
         <img src={git1} alt="git1" className=" w-20 opacity-50 absolute top-32 left-32 -rotate-6 hover:blur-sm duration-200" />
         <img src={git2} alt="git2" className=" w-20 opacity-50 absolute top-1/4 right-3 -rotate-6  hover:blur-sm duration-200" />
         <img src={git3} alt="git3" className=" w-20 opacity-50 absolute top-10 left-1/4 -rotate-6  hover:blur-sm duration-200" />

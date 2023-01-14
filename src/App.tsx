@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Background from "./Background";
+import Table from "./components/Table";
 import Datos from "./Datos";
 import gitIcon from "./img/git6.svg";
 import SvgComponent from './img/GitSVG1.jsx'
@@ -20,9 +21,9 @@ function App() {
   };
 
   return (
-    <div className="w-screen bg-gradient-to-tr  from-neutral-800 to-neutral-700 h-screen text-gray-200 flex flex-col gap-5 items-center justify-center overflow-hidden">
+    <div className="w-screen bg-gradient-to-tr py-16 from-neutral-800 to-neutral-700 min min-h-screen text-gray-200 flex flex-col gap-5 items-center justify-center overflow-x-hidden">
       <Background />
-      <div className="bg-gray-200  rounded-lg border mt-32 p-5 text-neutral-800 z-50 flex flex-col">
+      <div className="bg-gray-200  rounded-lg border  p-5 text-neutral-800 z-50 flex flex-col">
         <div className="w-full inline-flex group gap-5 items-center mb-5">
         <SvgComponent
         width="40"
@@ -36,7 +37,7 @@ function App() {
           type="text"
           name="usuarioName"
           id="usiarioName"
-          className="rounded py-1.5 px-2"
+          className="w-full mx-auto relative rounded px-5 py-1.5 overflow-hidden group focus:border-none  hover:ring-2 hover:ring-offset-2 hover:ring-orange-400 transition-all ease-out duration-300 outline-0 "
           placeholder="Introduce un usuario"
         />
         <button
@@ -49,10 +50,11 @@ function App() {
       <div className="z-50 bg-gray-300/70 w-10/12 rounded-lg ">
         {
 user.userName&&
-          <Datos 
-          datos={user.name}
-          />
-        }
+
+            <Table
+            datos={user.userName}
+            />
+}
         
         
       </div>
