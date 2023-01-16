@@ -28,7 +28,7 @@ export default function TableBody({ repository, isFavorite }: CardProps) {
       <td className="px-2 py-3  hover:text-blue-800 duration-100">
         <a href= {repository.html_url} target="_blank">
         {repository.html_url}</a></td>
-      <td className="px-2 py-3 text-sm text-gray-900 hover:text-blue-800  duration-100">
+      <td className="px-1 py-3 text-sm text-gray-900 hover:text-blue-800  duration-100">
       <a href= {repository.homepage} target="_blank">
         {repository.homepage}</a>
       </td>
