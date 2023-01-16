@@ -1,5 +1,7 @@
 import { Repository } from "../hooks/types";
 import { useFavoriteReposStora } from "../store/favoriteRepos";
+import LikeSVG from "../img/LikeSVG";
+import { useState } from "react";
 type CardProps = {
   repository: Repository;
   isFavorite: boolean;
@@ -36,7 +38,9 @@ export default function TableBody({ repository, isFavorite }: CardProps) {
         {repository.description}
       </td>
       <td className="px-2 py-3 font-light text-xs cursor-pointer duration-100 text-center hover:bg-gray-500/50" onClick={handleFavorite}>
-        {isFavorite ? "No Me Gusta" : "ME gusta"}
+         {/* <img src={isFavorite ? like:dislike} alt="like" className="w-10 mx-auto duration-500"/> */}
+        <LikeSVG  className={`${isFavorite? "fill-neutral-700/80":" fill-blue-700"} duration-300 mx-auto`}    isToggle={isFavorite}
+              />
       </td>
     </tr>
   );

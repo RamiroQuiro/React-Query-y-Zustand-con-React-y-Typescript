@@ -10,7 +10,7 @@ export default function Background() {
 const colocarImg=()=>{}
 
   return (
-    <div className="absolute w-full  h-full bg-red-100/10 backdrop-blur-sm z-0 top-0 left-0">
+    <div className="absolute w-full  h-[full] bg-red-100/10 backdrop-blur-sm z-0 top-0 left-0">
         <div className="w-80 bg-red-500/20 h-80 absolute rounded-full top-1/2 right-2 blur-[150px]"></div>
         <div className="w-96 bg-orange-500/20 h-96 absolute rounded-full -top-20 -left-20 blur-[150px]"></div>
       <div className="relative h-full w-full  ">
